@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "chaitanya",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": 12.74,
+      "left": 249.83,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_brake",
+      "top": 246.2,
+      "left": -38.4,
+      "attrs": { "color": "red", "label": "BRAKE" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_release",
+      "top": 188.6,
+      "left": 172.8,
+      "attrs": { "color": "green", "label": "RELEASE" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_alert",
+      "top": -22.8,
+      "left": -101.8,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "oled:VCC", "esp:3V3", "red", [ "v-9.6", "h-292.84" ] ],
+    [ "oled:GND", "esp:GND.1", "black", [ "h-67.2", "v134.4" ] ],
+    [ "oled:SDA", "esp:21", "green", [ "h0.07", "v-28.8", "h-163.2", "v86.4" ] ],
+    [ "oled:SCL", "esp:22", "yellow", [ "v-19.2", "h-182.1", "v48" ] ],
+    [ "btn_brake:1.l", "esp:14", "red", [ "v0" ] ],
+    [ "btn_brake:2.l", "esp:GND.2", "black", [ "h-7.2", "v-183.2" ] ],
+    [ "btn_release:1.l", "esp:27", "green", [ "v0" ] ],
+    [ "btn_release:2.l", "esp:GND.2", "black", [ "h-38.4", "v-191.8" ] ],
+    [ "led_alert:A", "esp:2", "red", [ "v0" ] ],
+    [ "led_alert:C", "esp:GND.2", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
