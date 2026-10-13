@@ -78,6 +78,10 @@ An automotive-grade, distributed Electronic Control Unit (ECU) vehicle safety sy
 - **Byte 1:** Time-To-Collision in seconds
 
 ---
+<img width="685" height="486" alt="image" src="https://github.com/user-attachments/assets/159d63a4-4c10-4ab9-a03b-b46db4a09657" />
+
+<img width="682" height="463" alt="image" src="https://github.com/user-attachments/assets/f2563639-47df-454a-9a61-92f835df563f" />
+
 
 ##  How to Run Locally
 
